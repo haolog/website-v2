@@ -3,6 +3,10 @@ import { withDocus } from '@docus/app'
 
 // Learn more at https://docus.dev
 export default withDocus({
+  target: 'static',
+  router: {
+    base: '/nuxt2/'
+  },
   rootDir: __dirname,
   head: {
     titleTemplate: 'Nuxt 2 - %s',
