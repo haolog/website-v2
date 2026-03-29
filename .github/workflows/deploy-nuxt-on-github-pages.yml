@@ -1,0 +1,36 @@
+name: Deploy Nuxt on GitHub Pages
+
+on:
+  push:
+    branches:
+      - release
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout website-v2
+        uses: actions/checkout@v4
+        with:
+          ref: release
+
+      - name: Setup node env
+        uses: actions/setup-node@v4
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Generate static site
+        run: yarn generate
+
+      - name: Deploy to target repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: haolog/nuxt2
+          publish_branch: main
+          publish_dir: ./dist
