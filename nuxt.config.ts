@@ -3,7 +3,7 @@ import { withDocus } from '@docus/app'
 
 // Learn more at https://docus.dev
 export default withDocus({
-  target: 'static',
+  // target: 'static',
   router: {
     base: '/nuxt2/'
   },
