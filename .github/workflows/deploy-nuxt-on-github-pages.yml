@@ -19,7 +19,7 @@ jobs:
       - name: Setup node env
         uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '16.13.0'
 
       - name: Install dependencies
         run: yarn install
@@ -42,11 +42,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
           TARGET: ${{ secrets.DEPLOY_TARGET }}
           SOURCE: dist/
-      # - name: Deploy to target server
-      #   uses: appleboy/scp-action@v1
-      #   with:
-      #     key: ${{ secrets.DEPLOY_KEY }}
-      #     username: ${{ secrets.DEPLOY_USER }}
-      #     host: ${{ secrets.DEPLOY_HOST }}
-      #     target: ${{ secrets.DEPLOY_TARGET }}
-      #     source: dist/
+
