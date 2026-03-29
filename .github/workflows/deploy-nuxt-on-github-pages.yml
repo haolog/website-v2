@@ -27,10 +27,18 @@ jobs:
       - name: Generate static site
         run: yarn generate
 
-      - name: Deploy to target repository
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.DEPLOY_TOKEN }}
-          external_repository: haolog/nuxt2
-          publish_branch: main
-          publish_dir: ./dist
+      # - name: Deploy to target repository
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     personal_token: ${{ secrets.DEPLOY_TOKEN }}
+      #     external_repository: haolog/nuxt2
+      #     publish_branch: main
+      #     publish_dir: ./dist
+      - name: Deploy to target server
+        uses: easingthemes/ssh-deploy@v5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+          REMOTE_USER: ${{ secrets.DEPLOY_USER }}
+          REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
+          TARGET: ${{ secrets.DEPLOY_TARGET }}
+          SOURCE: dist/
