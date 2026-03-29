@@ -35,7 +35,7 @@ jobs:
       #     publish_branch: main
       #     publish_dir: ./dist
       - name: Deploy to target server
-        uses: easingthemes/ssh-deploy@v5
+        uses: easingthemes/ssh-deploy@v4
         env:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
           REMOTE_USER: ${{ secrets.DEPLOY_USER }}
