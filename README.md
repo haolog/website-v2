@@ -9,7 +9,7 @@ We are using [Docus](https://docus.dev) to write our documentation (*we plan to 
 ```bash
 git clone https://github.com/nuxt/website-v2.git
 cd website-v2
-npm install
+yarn install
 ```
 
 We also recommend to install the [Docus extension](https://marketplace.visualstudio.com/items?itemName=Nuxt.mdc) for VS Code.
