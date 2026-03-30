@@ -8,7 +8,8 @@ export default {
     please_define_title: '请在文档页头中指定标题(title)字段',
     please_define_description: '请在文档页头中指定描述(description)字段',
     search: '搜索 ("/" 快速定位)',
-    version: '版本'
+    version: '版本',
+    email_address_copied: '邮箱地址已复制',
   },
   iso: 'zh',
   cookies: {

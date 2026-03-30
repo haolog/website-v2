@@ -7,7 +7,7 @@ bgClass: 'bg-white'
 
 ::home-hero
 #title
-The Intuitive Vue<br>Framework
+符合直觉的 Vue 框架
 
 #description
 使用 Nuxt 构建可信赖的下一代 Vue.js 应用程序<br class="hidden sm:block" /> 一个让 Web 开发变得简单而强大的开源框架
@@ -155,7 +155,7 @@ Nuxt 的开发由充满热情的开发者驱动，但维护和开发新功能所
   ::
 
 #bottom
-  :app-button[Become a partner]{href="mailto:partners@nuxtlabs.com"}
+  :app-button[成为合作伙伴]{href="mailto:partners@nuxtlabs.com"}
 ::
 
 ::home-learn-guides
