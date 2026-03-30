@@ -1,4 +1,7 @@
 export default {
+  toc: {
+    title: '内容目录：',
+  },
   common: {
     an_error_occurred: '文档API服务异常',
     page_not_found: '页面不存在',

@@ -163,7 +163,15 @@ export default withDocus({
   },
   i18n: {
     langDir: 'i18n/',
+    defaultLocale: 'zh',
     locales: [
+      {
+        code: 'zh',
+        iso: 'zh-ZH',
+        file: 'zh-ZH.js',
+        name: '简体中文',
+        domain: 'https://zh.nuxtjs.org'
+      },
       {
         code: 'en',
         iso: 'en-US',
