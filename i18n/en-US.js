@@ -2,6 +2,21 @@ import en from '~docus-i18n/en-US'
 
 export default {
   ...en,
+  other: {
+    appBanner: {
+      title1: 'You are browsing Nuxt 2 docs. Go to',
+      title2: 'Nuxt 3 docs',
+      title3: 'or learn more about',
+      title4: 'Nuxt 2 Long Term Support',
+      title5: '.',
+    },
+    asideBottom: {
+      title: 'Nuxt 3 docs',
+    },
+    homeHero: {
+      title: 'Learn about Nuxt 2 Long Term Support',
+    },
+  },
   cookies: {
     message: 'We use Cookies for user analysis and on-page improvements!',
     link: 'Learn about cookies',

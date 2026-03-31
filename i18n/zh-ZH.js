@@ -1,6 +1,21 @@
 export default {
+  other: {
+    appBanner: {
+      title1: '您正在浏览 Nuxt 2 文档。前往',
+      title2: 'Nuxt 3 文档',
+      title3: '或了解更多关于',
+      title4: 'Nuxt 2 长期支持',
+      title5: '。',
+    },
+    asideBottom: {
+      title: 'Nuxt 3 文档',
+    },
+    homeHero: {
+      title: '了解关于 Nuxt 2 长期支持',
+    },
+  },
   toc: {
-    title: '内容目录：',
+    title: '本页导读：',
   },
   common: {
     an_error_occurred: '文档API服务异常',

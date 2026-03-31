@@ -5,7 +5,7 @@ on:
     branches:
       - release
   workflow_dispatch:
-
+  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -15,25 +15,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: release
-
+      
       - name: Setup node env
         uses: actions/setup-node@v4
         with:
           node-version: '16.13.0'
-
+      
       - name: Install dependencies
         run: yarn install
-
+      
       - name: Generate static site
         run: yarn generate
-
-      # - name: Deploy to target repository
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     personal_token: ${{ secrets.DEPLOY_TOKEN }}
-      #     external_repository: haolog/nuxt2
-      #     publish_branch: main
-      #     publish_dir: ./dist
+      
       - name: Deploy to target server
         uses: easingthemes/ssh-deploy@v4
         env:
@@ -42,4 +35,11 @@ jobs:
           REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
           TARGET: ${{ secrets.DEPLOY_TARGET }}
           SOURCE: dist/
-
+      
+      # - name: Back up to the target repository
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     personal_token: ${{ secrets.DEPLOY_TOKEN }}
+      #     external_repository: ${{ secrets.DEPLOY_REPOSITORY }}
+      #     publish_branch: main
+      #     publish_dir: ./dist

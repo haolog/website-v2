@@ -13,7 +13,7 @@
             class="flex items-center truncate bg-primary/25 hover:bg-primary-800 text-white border border-primary py-3 px-4 rounded"
           >
             <IconStar class="h-4 w-4 mr-2" />
-            <span class="truncate">了解关于 Nuxt 2 长期支持</span>
+            <span class="truncate">{{$i18n.t('other.homeHero.title')}}</span>
           </AppLink>
         </div>
         <h1 class="font-normal font-serif text-display-5 xs:text-display-4 md:text-display-3 2xl:text-display-2 mb-6">
