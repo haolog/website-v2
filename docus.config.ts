@@ -5,12 +5,12 @@ export default {
   template: 'docs',
   credits: true,
   socialImage: false,
-  // algolia: {
-  //   appId: '1V8G7N9GF0',
-  //   apiKey: '60a01900a4b726d667eab75b6f337592',
-  //   indexName: 'nuxtjs',
-  //   facetFilters: ['tags:main']
-  // },
+  algolia: {
+    appId: 'C09KW1IJU7',
+    apiKey: '1449d7f9090d5ab86b0adffce51c5c53',
+    indexName: 'nuxt2-pages',
+    // facetFilters: ['tags:main']
+  },
   layout: {
     aside: false,
     banner: true
